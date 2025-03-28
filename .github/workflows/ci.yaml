@@ -30,5 +30,7 @@ jobs:
         with:
           repository: raghudevopsb83/roboshop-helm
       - name: Deploy
-        run: make component=${{ inputs.component_name }} env=dev
+        run: |
+          export PATH=/home/github/.local/bin:/home/github/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+          make component=${{ inputs.component_name }} env=dev
 
