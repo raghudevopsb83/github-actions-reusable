@@ -34,7 +34,7 @@ jobs:
 
   Dev-Deployment:
     runs-on: self-hosted
-    needs: DockerBuild-n-Push
+    needs: Docker-Push
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
