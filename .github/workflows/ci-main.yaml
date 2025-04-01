@@ -16,6 +16,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Download Dependencies
         run: |
+          env
+          exit 1
           if [ ${{inputs.app_type}} == nodejs ]; then
             npm install
           elif [ ${{inputs.app_type}} == maven ]; then
