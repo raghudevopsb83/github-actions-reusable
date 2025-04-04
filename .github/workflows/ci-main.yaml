@@ -53,6 +53,7 @@ jobs:
   QA-Deployment:
     runs-on: self-hosted
     needs: Dev-Deployment
+    #environment: QA
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
@@ -66,7 +67,6 @@ jobs:
 
   UAT-Deployment:
     runs-on: self-hosted
-    environment: QA
     needs: QA-Deployment
     steps:
       - name: Check out repository code
