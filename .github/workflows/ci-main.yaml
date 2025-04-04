@@ -66,6 +66,7 @@ jobs:
 
   UAT-Deployment:
     runs-on: self-hosted
+    environment: QA
     needs: QA-Deployment
     steps:
       - name: Check out repository code
